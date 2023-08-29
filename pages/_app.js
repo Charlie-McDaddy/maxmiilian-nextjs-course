@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Layout from "../components/layout/layout";
 import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -9,5 +10,9 @@ export const metadata = {
 };
 
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />;
+    </Layout>
+  );
 }
